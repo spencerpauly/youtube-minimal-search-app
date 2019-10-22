@@ -1,10 +1,14 @@
 import React from 'react';
 
 import NavigationBar from '../layout/NavigationBar';
+import Header from '../layout/Header';
 import SearchBar from './Searchbar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import {Image} from 'cloudinary-react';
+
+import './App.css';
 
 class App extends React.Component {
     state = {
@@ -32,7 +36,27 @@ class App extends React.Component {
                 <NavigationBar>
                     {/* Nav link items here */}
                 </NavigationBar>
-                <div className='ui container' style={{marginTop: '1em'}}>
+                <Header />
+                <div className="searchFlexbox">
+                    <div className="searchImageFlexItem">
+                        <Image className="searchImage" cloudName="spencerpauly" publicId="projects/youtubeicon2_v62eb1.png"/>
+
+                    </div>
+                    <div className="searchbarFlexItem">
+                        <SearchBar handleFormSubmit={this.handleSubmit}/>
+                    </div>
+                </div>
+                <div className="videoFlexbox">
+                    <div className="videoSection">
+                        <VideoDetail video={this.state.selectedVideo}/>
+
+                    </div>
+                    <div className="videoListSection">
+                        <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+
+                    </div>
+                </div>
+                {/* <div className='ui container' style={{marginTop: '1em'}}>
                     <SearchBar handleFormSubmit={this.handleSubmit}/>
                     <div className='ui grid'>
                         <div className="ui row">
@@ -44,7 +68,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </>
         )
     }

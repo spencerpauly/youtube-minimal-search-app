@@ -1,5 +1,10 @@
 import React from 'react';
 
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+
+import './Searchbar.css';
+
 class Searchbar extends React.Component {
     state = {
         term: 'Default text'
@@ -11,19 +16,16 @@ class Searchbar extends React.Component {
     };
     handleSubmit = event => {
         event.preventDefault();
+        console.log("test");
         this.props.handleFormSubmit(this.state.term);
     }
 
     render() {
         return (
-            <div className='search-bar ui segment'>
-                <form onSubmit={this.handleSubmit} className='ui form'>
-                    <div className='field'>
-                        <label htmlFor="video-search">Video Search</label>
-                        <input onChange={this.handleChange} name='video-search' type="text" value={this.state.term}/>
-                    </div>
-                </form>
-            </div>
+            <Form className="youtubeSearchbar" onSubmit={this.handleSubmit}>
+                <FormControl type="text" placeholder="Search Youtube" className="mr-sm-2" />
+            </Form>
+           
         )
     }
 }

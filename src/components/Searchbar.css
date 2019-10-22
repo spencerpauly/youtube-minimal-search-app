@@ -1,0 +1,25 @@
+.youtubeSearchbar {
+    max-width: 60em;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.searchFlexbox {
+    display: flex;
+    padding: 1em;
+    vertical-align: middle;
+}
+
+.searchImage {
+    width: 4em;
+}
+
+.searchImageFlexItem {
+
+}
+
+.searchbarFlexItem {
+    flex-basis: 100%;
+    vertical-align: middle;
+
+}

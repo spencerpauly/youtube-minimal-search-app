@@ -1,0 +1,13 @@
+.videoFlexbox {
+    display: flex;
+}
+
+.videoSection {
+    flex-basis: 70%;
+    padding: 2em;
+}
+
+.videoListSection {
+    flex-basis: 30%;
+    padding: 2em;
+}
