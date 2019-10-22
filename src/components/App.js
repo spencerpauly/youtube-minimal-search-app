@@ -1,4 +1,6 @@
 import React from 'react';
+
+import NavigationBar from '../layout/NavigationBar';
 import SearchBar from './Searchbar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
@@ -26,19 +28,24 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className='ui container' style={{marginTop: '1em'}}>
-                <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <div className='ui grid'>
-                    <div className="ui row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
-                        </div>
-                        <div className="five wide column">
-                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+            <>
+                <NavigationBar>
+                    {/* Nav link items here */}
+                </NavigationBar>
+                <div className='ui container' style={{marginTop: '1em'}}>
+                    <SearchBar handleFormSubmit={this.handleSubmit}/>
+                    <div className='ui grid'>
+                        <div className="ui row">
+                            <div className="eleven wide column">
+                                <VideoDetail video={this.state.selectedVideo}/>
+                            </div>
+                            <div className="five wide column">
+                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 }

@@ -1,0 +1,12 @@
+.navbar {
+    background: #212121;
+}
+
+.navbar span {
+    color: white;
+}
+
+.navbarLogo {
+    width: 30px;
+    height: 30px;
+}
