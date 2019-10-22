@@ -1,13 +1,17 @@
 .videoItemFlexbox {
     display: flex;
-    padding: .5em;
+    padding-bottom: 1em;
+    padding-right: 3em;
 }
 
+.videoDetailsContainer {
+    padding-left: .5em;
+
+}
 .videoImage {
-    border-style: solid;
-    border-width: 2px;
+    width: 16em;
+    height: 9em;
 }
 .videoTitle {
     font-weight: bold;
-    padding-left: .5em;
 }

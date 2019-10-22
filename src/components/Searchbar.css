@@ -8,18 +8,21 @@
     display: flex;
     padding: 1em;
     vertical-align: middle;
+    justify-content: center;
 }
 
 .searchImage {
     width: 4em;
+    padding-right: .9em;
 }
 
 .searchImageFlexItem {
-
 }
 
 .searchbarFlexItem {
-    flex-basis: 100%;
     vertical-align: middle;
+    flex-grow: .5;
+
+
 
 }

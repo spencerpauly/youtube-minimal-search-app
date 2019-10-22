@@ -3,11 +3,16 @@
 }
 
 .videoSection {
-    flex-basis: 70%;
-    padding: 2em;
+    flex-basis: 60%;
+    padding-right: 3em;
+    padding-left: 3em;
 }
 
 .videoListSection {
-    flex-basis: 30%;
-    padding: 2em;
+    flex-basis: 40%;
+}
+
+.searchFlexbox {
+    padding-top: 3em;
+    padding-bottom: 2em;
 }
