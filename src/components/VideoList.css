@@ -1,4 +1,8 @@
 .videoListFlexbox {
     display: flex;
     flex-direction: column;
+    height: 74vh;
+    overflow-y: scroll;
+    margin-right: 3em;
+
 }

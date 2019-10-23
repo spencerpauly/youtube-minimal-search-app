@@ -1,6 +1,23 @@
 .playingVideo {
 }
 
-.playingVideoContainer {
+.playingVideoDetails {
+    padding-left: 1em;
+    width: 100%;
+}
+
+.videoTitle {
+
+}
+
+.publishDate {
+
+}
+
+.channelTitle {
+
+}
+
+.videoDescription {
 
 }

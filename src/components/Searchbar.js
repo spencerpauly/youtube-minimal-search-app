@@ -23,7 +23,7 @@ class Searchbar extends React.Component {
     render() {
         return (
             <Form className="youtubeSearchbar" onSubmit={this.handleSubmit}>
-                <FormControl onChange={this.handleChange} type="text" placeholder="Search Youtube" className="mr-sm-2" />
+                <FormControl onChange={this.handleChange} type="text" placeholder="Search YouTube" autofocus="autofocus" className="mr-sm-2" />                
             </Form>
            
         )

@@ -13,7 +13,8 @@ import './App.css';
 class App extends React.Component {
     state = {
         videos: [],
-        selectedVideo: null
+        selectedVideo: null,
+        showHeader: true,
     }
     handleSubmit = async (termFromSearchBar) => {
         const response = await youtube.get('/search', {
@@ -22,12 +23,20 @@ class App extends React.Component {
             }
         })
         this.setState({
-            videos: response.data.items
+            videos: response.data.items,
+            showHeader: false,
         })
     };
     handleVideoSelect = (video) => {
         this.setState({selectedVideo: video})
-        //
+    }
+
+    showHeader = () => {
+        if (this.state.showHeader) {
+            return (<Header visible="true"/>)
+        } else {
+            return (<></>)
+        }
     }
 
     render() {
@@ -36,7 +45,7 @@ class App extends React.Component {
                 <NavigationBar>
                     {/* Nav link items here */}
                 </NavigationBar>
-                <Header />
+                <Header isVisible={this.state.showHeader ? 'true' : 'false' } />
                 <div className="searchFlexbox">
                     <div className="searchImageFlexItem">
                         <Image className="searchImage" cloudName="spencerpauly" publicId="projects/youtubeicon2_v62eb1.png"/>

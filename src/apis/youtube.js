@@ -7,6 +7,7 @@ export default axios.create({
         part: 'snippet',
         maxResults: 20,
         type: 'video',
+        videoEmbeddable: true,
         key: KEY,
     }
 })

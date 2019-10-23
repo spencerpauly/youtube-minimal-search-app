@@ -11,7 +11,7 @@ export class NavigationBar extends Component {
             <Navbar className="navbar" collapseOnSelect expand="lg" bg="black" variant="dark">
                 <Navbar.Brand href="/">
                     <Image className="navbarLogo d-inline-block align-top" cloudName="spencerpauly" publicId="projects/logo-secondary_mbjinr.png" width="100" crop="scale"/>
-                    {' '}
+                    {' Minimal Youtube Search App '}
                 </Navbar.Brand>                
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
