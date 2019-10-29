@@ -3,7 +3,6 @@ import '../style/video.css';
 import './VideoItem.css'
 
 const VideoItem = ({video , handleVideoSelect}) => {
-    console.log(video);
     if (!video) {
         return (
             <div className="videoItemFlexbox">

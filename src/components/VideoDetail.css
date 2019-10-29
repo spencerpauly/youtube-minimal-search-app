@@ -7,11 +7,13 @@
 }
 
 .videoTitle {
-
+    padding-top: .4em;
+    font-weight: normal;
+    font-size: 1.2em;
 }
 
 .publishDate {
-
+    font-weight: .8em;
 }
 
 .channelTitle {

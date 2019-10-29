@@ -13,17 +13,15 @@
     padding-left: .5em;
     flex-basis: .8;
     flex-grow: 1;
-    
 }
-.videoImage {
 
-}
 .videoTitle {
-    font-weight: bold;
+    font-weight: bold !important;
+    font-size: 1.1em !important;
 }
 
-.videoPlaceholder {
-
+.videoCreator {
+    font-size: .9em;
 }
 
 .videoImageContainer {
@@ -39,5 +37,5 @@
 
 .blurryText {
     color: transparent;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
  }

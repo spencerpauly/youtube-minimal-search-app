@@ -11,6 +11,8 @@
     height: 30px;
 }
 
-.centeredNavbarElement {
-    font-weight: bold;
+.bold {
+    font-weight: 600;
+    padding-left: .4em;
+    vertical-align: middle;
 }

@@ -4,15 +4,34 @@
 
 .videoSection {
     flex-basis: 65%;
-    padding-right: 3em;
-    padding-left: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 .videoListSection {
     flex-basis: 35%;
+    padding-right: 1em;
+
 }
 
 .searchFlexbox {
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+@media only screen and (max-width: 1000px) {
+    .videoFlexbox {
+        display: flex;
+        flex-direction: column;
+    }
+    .videoSection {
+        flex-basis: 100%;
+        padding-bottom: 1em;
+    }
+    .videoListSection {
+        flex-basis: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+

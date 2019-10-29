@@ -10,11 +10,10 @@ export class NavigationBar extends Component {
     render() {
         return (
             <Navbar className="navbar" collapseOnSelect expand="lg" bg="black" variant="dark">
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="https://spencerpauly.com">
                     <Image className="navbarLogo d-inline-block align-top" cloudName="spencerpauly" publicId="projects/logo-secondary_mbjinr.png" width="100" crop="scale"/>
-                    {' '}
+                    <span className="bold">Minimal Youtube Search App</span>
                 </Navbar.Brand>       
-                <span className="centeredNavbarElement">Minimal Youtube Search App</span>
             </Navbar>
         )
     }
