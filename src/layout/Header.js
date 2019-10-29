@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Header.css"
 import Button from "react-bootstrap/Button";
-import PropTypes from 'prop-types';
 import {Image} from 'cloudinary-react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,7 +14,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <section id="header" className={this.props.isVisible ? 'fadeIn' : 'fadeOut' }>
+            <section id="header">
                 <header className='header'>
                     <div>
                         <Image className="headerImg" cloudName="spencerpauly" publicId="projects/youtubeicon_nvkes9.png" width="500" height="500" crop="fill"/>
@@ -23,10 +22,6 @@ class Header extends React.Component {
 
                     <div>
                         <h1>Minimal Youtube Search App</h1>
-                        <p>
-                            This app lets you browse youtube in a minimal user interface without having to get served video recommendations.
-                            It's built to help you stay on-task as you use youtube to learn new skills. Enjoy!
-                        </p>
                         <Button href="https://github.com/spencerpauly/youtube-minimal-search-app" target="_blank" variant="main">View Github Code</Button>
                     </div>
                     
@@ -63,11 +58,6 @@ class Header extends React.Component {
             </section>
         )
     }
-}
-
-//PropTypes
-Header.propTypes = {
-    isVisible: PropTypes.bool
 }
 
 export default Header;

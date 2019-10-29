@@ -3,20 +3,12 @@
 }
 
 .header {
-    min-height: 12em;
-    padding-top: 3em;
+    min-height: 6em;
+    padding-top: 2em;
     width: 100%;
     color: white;
     display: flex;
     justify-content: center;
-}
-
-.fadeOut{
-    background: orange !important;
-
-}
-.fadeIn {
-    background: cyan;
 }
 
 .header div {
@@ -25,7 +17,7 @@
 }
 
 .headerImg {
-    width: 8em;
+    width: 6em;
     height: auto;
     border-radius: 50%;
     margin-left: 2em;

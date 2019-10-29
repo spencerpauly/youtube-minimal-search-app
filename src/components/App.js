@@ -1,5 +1,8 @@
 import React from 'react';
 
+import he from 'he';
+
+
 import NavigationBar from '../layout/NavigationBar';
 import Header from '../layout/Header';
 import SearchBar from './Searchbar';
@@ -16,17 +19,25 @@ class App extends React.Component {
         selectedVideo: null,
         showHeader: true,
     }
+
     handleSubmit = async (termFromSearchBar) => {
         const response = await youtube.get('/search', {
             params: {
                 q: termFromSearchBar
             }
         })
+
+        response.data.items = response.data.items.map(item => {
+            item.snippet.title = he.decode(item.snippet.title);
+            return item;
+       });
+
         this.setState({
             videos: response.data.items,
             showHeader: false,
         })
     };
+    
     handleVideoSelect = (video) => {
         this.setState({selectedVideo: video})
     }
@@ -42,10 +53,9 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <NavigationBar>
-                    {/* Nav link items here */}
+                <NavigationBar handleFormSubmit={this.handleSubmit}>
                 </NavigationBar>
-                <Header isVisible={this.state.showHeader ? 'true' : 'false' } />
+                
                 <div className="searchFlexbox">
                     <div className="searchImageFlexItem">
                         <Image className="searchImage" cloudName="spencerpauly" publicId="projects/youtubeicon2_v62eb1.png"/>

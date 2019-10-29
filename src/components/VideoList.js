@@ -7,11 +7,11 @@ const VideoList = ({videos , handleVideoSelect}) => {
     if (!videos || !videos.length) {
         return (
             <>
-                <VideoItem key="" video="" />
-                <VideoItem key="" video="" />
-                <VideoItem key="" video="" />
-                <VideoItem key="" video="" />
-                <VideoItem key="" video="" />
+                <VideoItem video="" />
+                <VideoItem video="" />
+                <VideoItem video="" />
+                <VideoItem video="" />
+                <VideoItem video="" />
             </>
         )
     }

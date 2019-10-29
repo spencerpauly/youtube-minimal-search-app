@@ -3,6 +3,7 @@ import '../style/video.css';
 import './VideoItem.css'
 
 const VideoItem = ({video , handleVideoSelect}) => {
+    console.log(video);
     if (!video) {
         return (
             <div className="videoItemFlexbox">
@@ -17,7 +18,9 @@ const VideoItem = ({video , handleVideoSelect}) => {
 
     return (
         <div onClick={ () => handleVideoSelect(video)} className='videoItemFlexbox'>
-            <img className='videoImage' src={video.snippet.thumbnails.medium.url} alt="" />
+            <div className="videoImageContainer">
+                <img src={video.snippet.thumbnails.medium.url} width="160px" height="90px" alt="" />
+            </div>
             <div className="videoDetailsContainer">
                 <div className="videoTitle">{video.snippet.title}</div>
                 <div className="videoCreator">{video.snippet.channelTitle}</div>

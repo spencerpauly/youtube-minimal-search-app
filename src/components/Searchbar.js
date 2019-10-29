@@ -15,15 +15,14 @@ class Searchbar extends React.Component {
         });
     };
     handleSubmit = event => {
-        event.preventDefault();
-        console.log("test");
+        event.preventDefault(); 
         this.props.handleFormSubmit(this.state.term);
     }
 
     render() {
         return (
             <Form className="youtubeSearchbar" onSubmit={this.handleSubmit}>
-                <FormControl onChange={this.handleChange} type="text" placeholder="Search YouTube" autofocus="autofocus" className="mr-sm-2" />                
+                <FormControl onChange={this.handleChange} type="text" placeholder="Search YouTube" autoFocus="autofocus" className="mr-sm-2" />                
             </Form>
            
         )

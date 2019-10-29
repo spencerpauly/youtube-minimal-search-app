@@ -1,5 +1,5 @@
 .navbar {
-    background: #212121;
+    background: #ff0000;
 }
 
 .navbar span {
@@ -9,4 +9,8 @@
 .navbarLogo {
     width: 30px;
     height: 30px;
+}
+
+.centeredNavbarElement {
+    font-weight: bold;
 }
